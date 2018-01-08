@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>我的web简历</title>
+  <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./lib/common/css/reset.css">
+  <link rel="stylesheet" href="./lib/swiper/css/swiper.css">
+  <link rel="stylesheet" href="./lib/animate/css/animate.css">
+  <link rel="stylesheet" href="./lib/common/css/mystyle.css">
+
+
+  <link rel="stylesheet" href="">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script type="text/javascript" src="./lib/swiper/js/swiper.js"></script>
+	<script type="text/javascript" src="./lib/swiper/js/jquery.js"></script>
+  <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./lib/common/js/myjs.js"></script>
+
+  <script type="text/javascript" src="./lib/konva.js"></script>
+  <script type="text/javascript" src="./lib/DashCircle.js"></script>
+  <script type="text/javascript" src="./lib/SkillCircle.js"></script>
+  <script src="./lib/wow/wow.js"></script>
+	
+</head>
+<script> 
+  
+  $(function(){
+    var height =$(window).height(); 
+    var width =$(window).width()-20; 
+    $(".swiper-container").css('height', height);
+    $(".swiper-container").css('width', width);
+
+   
+  	// var mySwiper = new Swiper ('.swiper-container', {
+   //  direction: 'vertical',
+   //  loop: true,
+   //  pagination : '.swiper-pagination',
+   //  paginationClickable :true,
+   //  effect : 'flip',
+   //  mousewheelControl:true
+    
+    
+
+   //  })  
+    var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'vertical',
+    pagination : '.swiper-pagination',
+    paginationClickable :true,
+    effect : 'flip',
+    mousewheelControl:true
+    
+    
+
+    })       
+  })
+</script>
+<body>
+	<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide bgimg1">
+          <!-- <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1198732119,3026837876&fm=27&gp=0.jpg" alt=""> -->
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+              <img class="myhead " src="./images/myhead.jpg" alt="">
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 mydesc animated ">
+              <h2>Hello I'm jieF</h2>
+              <strong class="mydictum">要相信,没有到不了的明天!!!</strong>
+              <p class="p1">我叫郑杰锋</p>
+              <p class="p2">是一名前端开发工程师</p>
+              <p class="p3">email:893807049@qq.com</p>
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+        </div>
+        <div class="swiper-slide bgimg2">
+          <!-- <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1501699881,1528260993&fm=27&gp=0.jpg" alt=""> -->
+          <h2 class="introduce wow bounceInRight">这是我的个人技术介绍</h2>
+          <div id="technical_box" class="animated "></div>
+          <script type="text/javascript">
+            
+            var stage = new Konva.Stage({
+              width:700,
+              height:700,
+              container:"technical_box"
+            });
+            var layer = new Konva.Layer({
+              x:0,y:0
+            });
+            stage.add(layer);
+            var outerRadius = 200;
+            var innerRadius = 100;
+            var dash = new DashCircle({
+              x : stage.width()/2,
+              y : stage.height()/2,
+              outerRadius : outerRadius,
+              innerRadius : innerRadius,
+              stroke : "gray",
+              strokeWidth : 4
+            });
+            dash.render(layer);
+            var datas = [
+              { 
+                angle:-60,
+                radius:innerRadius,
+                stroke:"gray",
+                fill:getRandomColor(),
+                strokeWidth : 1,
+                text : "react"
+              },
+              { 
+                angle:30,
+                radius:innerRadius,
+                stroke:"gray",
+                fill:getRandomColor(),
+                strokeWidth : 1,
+                text : "react native"
+              },
+              { 
+                angle:120,
+                radius:innerRadius,
+                stroke:"gray",
+                fill:getRandomColor(),
+                strokeWidth : 1,
+                text : "微信小程序"
+              },
+              { 
+                angle:210,
+                radius:innerRadius,
+                stroke:"gray",
+                fill:getRandomColor(),
+                strokeWidth : 1,
+                text : "vue"
+              },
+              { 
+                angle:-30,
+                radius:outerRadius,
+                stroke:"gray",
+                fill:getRandomColor(),
+                strokeWidth : 1,
+                text : "html5"
+              },{ 
+                angle:15,
+                radius:outerRadius,
+                stroke:"gray",
+                fill:getRandomColor(),
+                strokeWidth : 1,
+                text : "css3"
+              },{ 
+                angle:60,
+                radius:outerRadius,
+                stroke:"gray",
+                fill:getRandomColor(),
+                strokeWidth : 1,
+                text : "js"
+              },{ 
+                angle:105,
+                radius:outerRadius,
+                stroke:"gray",
+                fill:getRandomColor(),
+                strokeWidth : 1,
+                text : "swiper"
+              },{ 
+                angle:150,
+                radius:outerRadius,
+                stroke:"gray",
+                fill:getRandomColor(),
+                strokeWidth : 1,
+                text : "animate"
+              },{ 
+                angle:195,
+                radius:outerRadius,
+                stroke:"gray",
+                fill:getRandomColor(),
+                strokeWidth : 1,
+                text : "konva"
+              },{ 
+                angle:240,
+                radius:outerRadius,
+                stroke:"gray",
+                fill:getRandomColor(),
+                strokeWidth : 1,
+                text : "bootstrap"
+              },{ 
+                angle:285,
+                radius:outerRadius,
+                stroke:"gray",
+                fill:getRandomColor(),
+                strokeWidth : 1,
+                text : "node.js"
+              }
+            ];
+            var skill = new SkillCircle({
+              datas:datas
+            });
+            skill.render(layer);
+            layer.draw();
+            // 直接调用skill对象中的rotate方法
+            skill.rotate(layer);
+            function getRandomColor(){
+              var red = parseInt(Math.random()*256);
+              var green = parseInt(Math.random()*256);
+              var blue = parseInt(Math.random()*256);
+              // 准备颜色数据
+              var color = "rgba("+red+","+green+","+blue+",0.8)";
+              return color;
+            }
+          </script>
+          
+        </div>
+        <div class="swiper-slide bgimg3">
+          <!-- <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2671897151,3549554231&fm=27&gp=0.jpg" alt=""> -->
+          <h2 class="Project_introduction">这是我的个人项目介绍</h2>
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-3 project">
+              项目一：基于react的头条新闻项目<br/><br/>  
+              个人职责：独立开发 <br/><br/>  
+              主要功能：登录注册、新闻详情、新闻收藏、用户评论以及用户中心 <br/><br/>  
+              运用技术:react 、ant design（框架） 、MediaQuery（实现PC端手机端切换）Router（页面切换的路由）fetch请求数据
+            </div>
+            <div class="col-md-4 project">
+              项目二：百思不得姐（微信小程序）<br/><br/> 
+              个人职责：独立开发 <br/><br/> 
+              主要功能：<br/><br/> 
+              1.用swiper实现内容的切换<br/>
+              2.用navigator传递参数实现视频和音乐播放<br/>
+              3.scroll-view 实现内容的滑动效果<br/>
+              4.对段子的评论<br/>
+              5.登录以及自动登录<br/>
+            </div>
+            <div class="col-md-3 project">
+              项目三：网上花店的实现<br/><br/> 
+              个人职责：独立开发 <br/><br/> 
+              主要功能：登录注册、商品浏览、商品查找、商品详情、加入购物车、商品的收藏点赞、商品的评论、购物车结算、收货地址提交、管理后台等<br/><br/> 
+              运用技术：nodejs、bootstrap、jQuery、each请求数据
+            </div>
+
+            <div class="col-md-1"></div>
+          </div>
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+
+    
+    <!-- 如果需要导航按钮 -->
+    <!-- <div class="swiper-button-prev"></div> -->
+    <!-- <div class="swiper-button-next"></div> -->
+    
+    <!-- 如果需要滚动条 -->
+    <!-- <div class="swiper-scrollbar"></div> -->
+</div>
+  <script type="text/javascript">
+    // new WOW({
+    //   boxClass:'wow',
+    //   animateClass: 'animated'
+    // }).init();
+  </script>
+</body>
+</html>
